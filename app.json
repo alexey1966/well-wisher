@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Твой Настрой",
+    "description": "No description",
+    "slug": "snack-BJ9uU6uhX",
+    "privacy": "unlisted",
+    "sdkVersion": "30.0.0",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "splash": {
+      "image": "./assets/splash.png"
+    },
+    "icon": "./assets/icons/icon.png",
+    "loading": {
+      "icon": "https://d1wp6m56sqw74a.cloudfront.net/~assets/c9aa1be8a6a6fe81e20c3ac4106a2ebc",
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "assetExts": [
+        "ttf",
+        "mp4",
+        "otf",
+        "xml",
+        "mp3",
+        "png",
+        "jpg",
+        "jpeg"
+      ]
+    },
+    "assetBundlePatterns": [
+      "assets/audio/*",
+      "assets/icons/*",
+      "assets/images/background/*",
+      "assets/images/icons/*",
+      "assets/splash.png"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ru.internalgroup.wellwisher"
+    }
+  }
+}

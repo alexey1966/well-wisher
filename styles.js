@@ -1,5 +1,4 @@
 import { Dimensions, StyleSheet } from 'react-native';
-import { Constants } from 'expo'
 
 export const blurParameters = {
   view: {

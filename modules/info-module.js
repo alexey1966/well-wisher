@@ -1,14 +1,16 @@
 const types = {
   SET_PERSONAL_INFO_PROVIDED : 'SET_PERSONAL_INFO_PROVIDED',
   SET_NAME : 'SET_NAME',
-  SET_GENDER : 'SET_GENDER'
+  SET_GENDER : 'SET_GENDER',
+  SET_LANGUAGE : 'SET_LANGUAGE'
 }
 
 const initialState = {
   name : null,
   isFemale : null,
   isPersonalInfoProvided : false,
-  infoProvidedDate: null
+  infoProvidedDate : null,
+  language : null
 }
 
 export const setPersonalInfoProvided = () => {
@@ -31,6 +33,13 @@ export const setGender = (isFemale) => {
   };
 }
 
+export const setLanguage = (language) => {
+  return {
+    type: types.SET_LANGUAGE,
+    language
+  };
+}
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case types.SET_PERSONAL_INFO_PROVIDED:
@@ -48,6 +57,11 @@ export default (state = initialState, action) => {
       return { 
         ...state, 
         isFemale : action.isFemale 
+      }
+    case types.SET_LANGUAGE:
+      return { 
+        ...state, 
+        language : action.language 
       }
     default:
       return state;

@@ -3,6 +3,7 @@ import styles, { blurParameters } from '../../styles'
 import { BlurView } from 'expo'
 import React from 'react';
 import { icons } from '../../constants'
+import I18n from 'react-native-i18n';
 
 export default class AskGenderScreen extends React.Component {
   render() {
@@ -12,7 +13,7 @@ export default class AskGenderScreen extends React.Component {
         intensity={blurParameters.view.intensity} 
         style={styles.focusView}
       >
-        <Text style={styles.askInfoTitleText}>Введите свои данные</Text>
+        <Text style={styles.askInfoTitleText}>{I18n.t('titleText.askEnterData')}</Text>
         <View style={styles.genderView}> 
           <BlurView 
             tint={blurParameters.button.tint} 

@@ -2,6 +2,7 @@ import React from 'react';
 import { BlurView } from 'expo'
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 import styles, { blurParameters } from '../../styles'
+import I18n from 'react-native-i18n';
 
 export default class AskNameComponent extends React.Component {
   render() {
@@ -11,7 +12,7 @@ export default class AskNameComponent extends React.Component {
         intensity={blurParameters.view.intensity} 
         style={styles.focusView}
       >
-        <Text style={styles.askInfoTitleText}>Введите свои данные</Text>
+        <Text style={styles.askInfoTitleText}>{I18n.t('titleText.askEnterData')}</Text>
         <View>  
           <BlurView 
             tint={blurParameters.view.tint} 
@@ -22,7 +23,7 @@ export default class AskNameComponent extends React.Component {
               onChangeText={(name) => this.props.setName(name.trim())} 
               style={styles.askInfoText} 
               defaultValue={this.props.name}
-              placeholder="Имя"
+              placeholder={I18n.t('inputText.name')}
             />
           </BlurView>
           <BlurView 
@@ -37,7 +38,7 @@ export default class AskNameComponent extends React.Component {
               <TextInput  
                 pointerEvents="none"
                 style={styles.askInfoText} 
-                placeholder="Пол"
+                placeholder={I18n.t('inputText.gender')}
               />
             </TouchableOpacity>
           </BlurView>

@@ -1,4 +1,5 @@
 import React from 'react';
+import I18n from 'react-native-i18n';
 import { BlurView } from 'expo';
 import { Image, Switch, Text, TouchableOpacity, View } from 'react-native';
 import styles, { blurParameters } from '../../styles'
@@ -45,7 +46,7 @@ export default class NotificationScreen extends MainViewComponent {
     if (this.state.notificationGranted) {
       return (
         <View style={styles.notificationEnabledView}>
-          <Text style={styles.titleText}>Включить уведомления</Text>
+          <Text style={styles.titleText}>{I18n.t('titleText.notificationTurnOn')}</Text>
           <Switch 
             style={{ marginLeft : 10 }}
             onValueChange = {() => this.onPushNotificationsEnabledChange()}
@@ -56,8 +57,8 @@ export default class NotificationScreen extends MainViewComponent {
     } else {
       return (
         <View>
-          <Text style={styles.notificationText}>Включите уведомления в настройках телефона:</Text>
-          <Text style={styles.notificationText}>Настройки -> Твой Настрой</Text>
+          <Text style={styles.notificationText}>{I18n.t('titleText.askNotificationTurnOn')}</Text>
+          <Text style={styles.notificationText}>{I18n.t('titleText.notificationSettingPath')}</Text>
         </View>
       );
     }
@@ -74,7 +75,7 @@ export default class NotificationScreen extends MainViewComponent {
             setPushNotificationTime={(low, high) => this.props.setPushNotificationTime(low, high)}
           />
           <View style={styles.separator} />
-          <Text style={styles.notificationText}>Выберите удобное время получения позитивных уведомлений для поднятия настроения, привлечения удачи и достижения успеха</Text>
+          <Text style={styles.notificationText}>{I18n.t('applicationInfo.notificationInfo')}</Text>
           <TouchableOpacity onPress={() => this.onComplete()}>
             <Image 
               style={styles.downIcon}

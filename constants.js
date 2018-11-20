@@ -1,3 +1,4 @@
+import I18n from 'react-native-i18n';
 
 export const icons = {
   CATEGORIES : require('./assets/images/icons/categories.png'),
@@ -45,8 +46,8 @@ export const audio = {
 }
 
 export const information = {
-  appName : 'Твой Настрой',
+  appName : I18n.t('applicationInfo.name'),
   appVersion : '1.0.0.35',
-  appDescription : 'Приложение для поднятия настроения, улучшения психоэмоционального фона и стимулирования положительных перемен в жизни.',
+  appDescription : I18n.t('applicationInfo.description'),
   authorMail : 'alexey@internalgroup.ru'
 }

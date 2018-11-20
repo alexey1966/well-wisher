@@ -5,6 +5,7 @@ import { askNotificationPermission, scheduleNotifications } from '../../bl/notif
 import MainViewComponent from '../../components/helpers/MainViewComponent'
 import TimePickerComponent from '../../components/helpers/TimePickerComponent'
 import React from 'react';
+import I18n from 'react-native-i18n';
 
 export default class AskNotificationScreen extends MainViewComponent {
   onPress() {
@@ -29,9 +30,7 @@ export default class AskNotificationScreen extends MainViewComponent {
         intensity={blurParameters.view.intensity} 
         style={[styles.focusView, { alignItems : 'center' }]}
       >
-        <Text style={styles.notificationText}>
-        Выберите удобное время получения позитивных уведомлений для поднятия настроения, привлечения удачи и достижения успеха
-        </Text>
+        <Text style={styles.notificationText}>{I18n.t('applicationInfo.notificationInfo')}</Text>
         <View style={styles.separator} />
         <TimePickerComponent
           pushNotificationTime={this.props.pushNotificationTime}
@@ -40,7 +39,7 @@ export default class AskNotificationScreen extends MainViewComponent {
         <View style={styles.separator} /> 
         <BlurView tint={blurParameters.view.tint} intensity={blurParameters.view.intensity} style={styles.readyButtonView}>
           <TouchableOpacity onPress={() => this.onPress()}>
-            <Text style={styles.askInfoText}>Готово</Text>
+            <Text style={styles.askInfoText}>{I18n.t('buttonText.done')}</Text>
           </TouchableOpacity>
         </BlurView>
       </BlurView>

@@ -1,32 +1,33 @@
+import I18n from 'react-native-i18n';
 import { icons } from '../constants'
 
 export default [
   { 
     id: 0,
     order: 0,
-    title: 'Настроение',
-    subtitle: 'Пожелания для поднятия настроения',
+    title: I18n.t('titleText.categories.mood.title'),
+    subtitle: I18n.t('titleText.categories.mood.subtitle'),
     icon: icons.MOOD
   },
   { 
     id: 1,
     order: 1,
-    title: 'Удача',
-    subtitle: 'Пожелания для привлечения удачи',
+    title: I18n.t('titleText.categories.luck.title'),
+    subtitle: I18n.t('titleText.categories.luck.subtitle'),
     icon: icons.LUCK
   },
   { 
     id: 2,
     order: 2,
-    title: 'Успех',
-    subtitle: 'Пожелания для достижения успеха',
+    title: I18n.t('titleText.categories.success.title'),
+    subtitle: I18n.t('titleText.categories.success.subtitle'),
     icon: icons.SUCCESS
   },
   { 
     id: 3,
     order: 3,
-    title: 'Мотивация',
-    subtitle: 'Вперед и только вперед',
+    title: I18n.t('titleText.categories.motivation.title'),
+    subtitle: I18n.t('titleText.categories.motivation.subtitle'),
     icon: icons.MOTIVATION
   }
 ]

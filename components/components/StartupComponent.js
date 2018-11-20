@@ -31,7 +31,7 @@ export default class StartupComponent extends React.Component {
     let store = persistStore(this.props.store);
     
     await Promise.all([...backgroundImagesAssets, ...iconsAssets, sound, store]);
-    runStartupTasks(this.props.store);
+    await runStartupTasks(this.props.store);
   }
 
   renderNavigator() {

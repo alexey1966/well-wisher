@@ -25,20 +25,20 @@ const MainNavigator = createStackNavigator(
     initialRouteName: 'Main',
     transitionConfig: () => ({
       screenInterpolator: (props) => {
-          return fromBottonToTop(props)
+        return fromBottonToTop(props)
       },
       containerStyle: {
-        backgroundColor: 'transparent',
+        backgroundColor: 'transparent'
       },
       transitionSpec: {
-        duration: 400,
-      },
+        duration: 400
+      }
     }),
 
     mode: 'modal',
     headerMode : 'float',
     cardStyle: { backgroundColor: 'transparent' },
-    navigationOptions : ({navigation}) => { 
+    navigationOptions : ({ navigation }) => { 
       return { 
         headerTitle: <AppTitleComponent />, 
         headerTransparent: true, 

@@ -3,6 +3,7 @@ import { Image, Linking, Text, TouchableOpacity, View } from 'react-native';
 import styles from '../../styles'
 import { icons, information } from '../../constants'
 import ListComponent from '../../components/helpers/ListComponent'
+import I18n from 'react-native-i18n';
 
 export default class SettingsScreen extends React.Component {
   constructor(props) {
@@ -18,36 +19,36 @@ export default class SettingsScreen extends React.Component {
       {
         id : 0,
         icon : icons.INFO,
-        title : 'Данные',
-        subtitle : 'Введите свои персональные данные',
+        title : I18n.t('titleText.settings.info.title'),
+        subtitle : I18n.t('titleText.settings.info.subtitle'),
         onPress : () => this.props.navigation.navigate('Info')
       },
       {
         id : 1,
         icon : icons.TIME,
-        title : 'Уведомления',
-        subtitle : 'Время получения приятных уведомлений',
+        title : I18n.t('titleText.settings.notification.title'),
+        subtitle : I18n.t('titleText.settings.notification.subtitle'),
         onPress : () => this.props.navigation.navigate('Notification')
       },
       {
         id : 2,
         icon : icons.FEEDBACK,
-        title : 'Оценить приложение',
-        subtitle : 'Мы будем вам очень признательны',
+        title : I18n.t('titleText.settings.feedback.title'),
+        subtitle : I18n.t('titleText.settings.feedback.subtitle'),
         onPress : () => {}
       },
       {
         id : 3,
         icon : icons.MAIL,
-        title : 'Написать автору',
-        subtitle : 'Напишите ваши отзывы и предложения',
+        title : I18n.t('titleText.settings.mail.title'),
+        subtitle : I18n.t('titleText.settings.mail.subtitle'),
         onPress : () => Linking.openURL('mailto://' + information.authorMail)
       },
       {
         id : 4,
         icon : icons.VERSION,
-        title : 'Информация',
-        subtitle : 'Получите информацию о приложении ',
+        title : I18n.t('titleText.settings.app.title'),
+        subtitle : I18n.t('titleText.settings.app.subtitle'),
         onPress : () => this.props.navigation.navigate('Version')
       }
     ];

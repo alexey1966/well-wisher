@@ -1,3 +1,4 @@
+import I18n from 'react-native-i18n';
 import { backgroundImages } from '../constants'
 
 export default [
@@ -7,7 +8,7 @@ export default [
     categoryId: 0,
     image: backgroundImages[0],
     getText: (name, isFemale) => {
-      return name + ', пусть cегодня весь день тебя будет преследовать удача и все дела будут выполняться с легкостью!';
+      return name + I18n.t('wishes[0].genderless');
     }
   },
   { 
@@ -16,7 +17,7 @@ export default [
     categoryId: 0,
     image: backgroundImages[1],
     getText: (name, isFemale) => {
-      return 'Побольше тебе заряда бодрости и отличного настроения на весь день!';
+      return I18n.t('wishes[1].genderless');
     }
   },
   { 
@@ -25,7 +26,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[2],
     getText: (name, isFemale) => {
-      return name + ', пускай тебе сегодня улыбнется удача и сопутствует на протяжении дня хорошее настроение!';
+      return name + I18n.t('wishes[2].genderless');
     }
   },
   { 
@@ -34,7 +35,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[3],
     getText: (name, isFemale) => {
-      return 'Побольше позитивных эмоций сегодня, новых впечатлений и неожиданных встреч!';
+      return I18n.t('wishes[3].genderless');
     }
   },
   { 
@@ -43,7 +44,7 @@ export default [
     categoryId: 2,
     image: backgroundImages[4],
     getText: (name, isFemale) => {
-      return name + ', пусть весь день сегодня пройдет как по маслу, а также решились успешно все твои дела!';
+      return name + I18n.t('wishes[4].genderless');
     }
   },
   { 
@@ -52,7 +53,7 @@ export default [
     categoryId: 2,
     image: backgroundImages[5],
     getText: (name, isFemale) => {
-      return 'Начни свой день с позитивных мыслей о том, что ты полностью контролируешь каждый аспект своей жизни!';
+      return I18n.t('wishes[5].genderless');
     }
   },
   { 
@@ -61,7 +62,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[6],
     getText: (name, isFemale) => {
-      return 'Верь в то, что с каждым днём тебе будет становится все лучше и лучше!';
+      return I18n.t('wishes[6].genderless');
     }
   },
   { 
@@ -70,7 +71,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[7],
     getText: (name, isFemale) => {
-      return name + ', неважно во что ты сегодня одет' + (isFemale ? 'а' : '') + ' и сколько у тебя сегодня денег. Реализуй свои цели и преврати их в реальность!';
+      return name + (isFemale ? I18n.t('wishes[7].female') : I18n.t('wishes[7].male'));
     }
   },
   { 
@@ -79,7 +80,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[8],
     getText: (name, isFemale) => {
-      return name + ', пусть этот день подарит тебе много впечатлений и новых идей!';
+      return name + I18n.t('wishes[8].genderless');
     }
   },
   { 
@@ -88,7 +89,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[9],
     getText: (name, isFemale) => {
-      return 'Пусть тебе сегодня сопутствует удача и все, что ты сделаешь, приблизит тебя к успеху!';
+      return I18n.t('wishes[9].genderless');
     }
   },
   { 
@@ -97,7 +98,7 @@ export default [
     categoryId: 0,
     image: backgroundImages[0],
     getText: (name, isFemale) => {
-      return name + ', сегодня тебя ждет прекрасный день и пусть он будет наполнен замечательными событиями!';
+      return name + I18n.t('wishes[10].genderless');
     }
   },
   { 
@@ -106,7 +107,7 @@ export default [
     categoryId: 0,
     image: backgroundImages[1],
     getText: (name, isFemale) => {
-      return 'Побольше тебе сегодня хорошего настроения и желания покорять новые вершины!';
+      return I18n.t('wishes[11].genderless');
     }
   },
   { 
@@ -115,7 +116,7 @@ export default [
     categoryId: 2,
     image: backgroundImages[2],
     getText: (name, isFemale) => {
-      return name + ', хорошо тебе сегодня и плодотворно провести весь день. Будь на позитиве!';
+      return name + I18n.t('wishes[12].genderless');
     }
   },
   { 
@@ -124,7 +125,7 @@ export default [
     categoryId: 2,
     image: backgroundImages[3],
     getText: (name, isFemale) => {
-      return 'Пусть этот день подарит тебе новые возможности для достижения поставленных целей!';
+      return I18n.t('wishes[13].genderless');
     }
   },
   { 
@@ -133,7 +134,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[4],
     getText: (name, isFemale) => {
-      return name + ', делай все возможное каждый день и все твои мечты в скором времени сбудутся!';
+      return name + I18n.t('wishes[14].genderless');
     }
   },
   { 
@@ -142,7 +143,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[5],
     getText: (name, isFemale) => {
-      return 'Делай что можешь, с тем, что есть у тебя, и в скором времени все твои цели будут достигнуты!';
+      return I18n.t('wishes[15].genderless');
     }
   },
   { 
@@ -151,7 +152,7 @@ export default [
     categoryId: 0,
     image: backgroundImages[6],
     getText: (name, isFemale) => {
-      return name + ', пусть этот день будет для тебя плодотворным и принесет массу положительных эмоций!';
+      return name + I18n.t('wishes[16].genderless');
     }
   },
   { 
@@ -160,7 +161,7 @@ export default [
     categoryId: 0,
     image: backgroundImages[7],
     getText: (name, isFemale) => {
-      return 'Хорошего тебе сегодня дня, а также побольше позитивных новостей и событий!';
+      return I18n.t('wishes[17].genderless');
     }
   },
   { 
@@ -169,7 +170,7 @@ export default [
     categoryId: 0,
     image: backgroundImages[8],
     getText: (name, isFemale) => {
-      return name + ', настал новый интересный и многообещающий день. Хорошего тебе сегодня настроения!';
+      return name + I18n.t('wishes[18].genderless');
     }
   },
   { 
@@ -178,7 +179,7 @@ export default [
     categoryId: 0,
     image: backgroundImages[9],
     getText: (name, isFemale) => {
-      return 'Пусть сегодняшний день пройдет интересно и весело, а также принесет тебе новых побед и свершений!';
+      return I18n.t('wishes[19].genderless');
     }
   },
   { 
@@ -187,7 +188,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[0],
     getText: (name, isFemale) => {
-      return name + ', умей оставаться сам' + (isFemale ? 'ой' : 'им') + ' собой и ты не станешь игрушкой в руках своей судьбы!';
+      return name + (isFemale ? I18n.t('wishes[20].female') : I18n.t('wishes[21].male'));
     }
   },
   { 
@@ -196,7 +197,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[1],
     getText: (name, isFemale) => {
-      return 'Искусство быть счастлив' + (isFemale ? 'ой' : 'ым') + ' заключается в способности находить счастье в простых вещах. Будь счастлив' + (isFemale ? 'а' : '') + '!';
+      return isFemale ? I18n.t('wishes[21].female') : I18n.t('wishes[21].male');
     }
   },
   { 
@@ -205,7 +206,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[2],
     getText: (name, isFemale) => {
-      return name + ', если ты чего-то очень хочешь, рано или поздно ты получишь это!';
+      return name + I18n.t('wishes[22].genderless');
     }
   },
   { 
@@ -214,7 +215,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[3],
     getText: (name, isFemale) => {
-      return name + ', то во что ты хочешь верить, ты способ' + (isFemale ? 'на' : 'ен') + ' достичь!';
+      return name + (isFemale ? I18n.t('wishes[23].female') : I18n.t('wishes[23].male'));
     }
   },
   { 
@@ -223,7 +224,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[4],
     getText: (name, isFemale) => {
-      return name + ', если ты чего-то очень хочешь, рано или поздно ты это получишь!';
+      return name + I18n.t('wishes[24].genderless');
     }
   },
   { 
@@ -232,7 +233,7 @@ export default [
     categoryId: 3,
     image: backgroundImages[5],
     getText: (name, isFemale) => {
-      return name + ', то во что ты хочешь верить, ты способ' + (isFemale ? 'на' : 'ен') + ' достичь!';
+      return name + (isFemale ? I18n.t('wishes[25].female') : I18n.t('wishes[25].male'));
     }
   },
   { 
@@ -241,7 +242,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[6],
     getText: (name, isFemale) => {
-      return name + ', все что произойдёт сегодня с тобой, все к лучшему!';
+      return name + I18n.t('wishes[26].genderless');
     }
   },
   { 
@@ -250,7 +251,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[7],
     getText: (name, isFemale) => {
-      return 'Ты получишь все, о чем мечтаешь и к чему стремишься!';
+      return I18n.t('wishes[27].genderless');
     }
   },
   { 
@@ -259,7 +260,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[8],
     getText: (name, isFemale) => {
-      return name + ', пусть этот день подарит тебе много впечатлений и новых идей!';
+      return name + I18n.t('wishes[28].genderless');
     }
   },
   { 
@@ -268,7 +269,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[9],
     getText: (name, isFemale) => {
-      return 'Верь в то, что с каждым днём тебе будет становится все лучше и лучше';
+      return I18n.t('wishes[29].genderless');
     }
   },
   { 
@@ -277,7 +278,7 @@ export default [
     categoryId: 1,
     image: backgroundImages[4],
     getText: (name, isFemale) => {
-      return name + ', ты способ' + (isFemale ? 'на' : 'ен') + ' покорить любые высоты, и ты придешь к тому, чего ты ждешь!';
+      return name + (isFemale ? I18n.t('wishes[30].female') : I18n.t('wishes[30].male'));
     }
   }
 ]

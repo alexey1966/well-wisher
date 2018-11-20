@@ -21,20 +21,20 @@ const AskInfoNavigator = createStackNavigator(
     initialRouteName: 'AskName',
     transitionConfig: () => ({
       screenInterpolator: (props) => {
-          return fadeFromInToOut(props)
+        return fadeFromInToOut(props)
       },
       containerStyle: {
-        backgroundColor: 'transparent',
+        backgroundColor: 'transparent'
       },
       transitionSpec: {
-        duration: 200,
-      },
+        duration: 200
+      }
     }),
 
     mode: 'modal',
     headerMode : 'float',
     cardStyle: { backgroundColor: 'transparent' },
-    navigationOptions : ({navigation}) => { 
+    navigationOptions : ({ navigation }) => { 
       return { 
         headerTitle: <AppTitleComponent />, 
         headerTransparent: true, 

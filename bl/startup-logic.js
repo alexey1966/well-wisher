@@ -6,18 +6,19 @@ import { getWishByCurrentDay } from '../bl/wishes-logic'
 import { setWish } from '../modules/wish-module'
 import { setLanguage } from '../modules/info-module'
 import I18n from 'react-native-i18n';
+import translations from '../translations'
 
 const handleLanguage = async (store) => {
+  I18n.fallbacks = true;
+  I18n.translations = translations;
+  
   if (store.getState().info.language === null) {
     const locale = await Util.getCurrentLocaleAsync();
     let language = JSON.stringify(locale, null, 2) === 'ru-RU' ? 'ru' : 'en';
-
-    I18n.fallbacks = true;
+ 
     I18n.locale = language;
-
     store.dispatch(setLanguage(language));
   } else {
-    I18n.fallbacks = true;
     I18n.locale = store.getState().info.language;
   }
 }

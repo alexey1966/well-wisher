@@ -9,18 +9,22 @@ import I18n from 'react-native-i18n';
 import translations from '../translations'
 
 const handleLanguage = async (store) => {
-  I18n.fallbacks = true;
-  I18n.translations = translations;
-  
   if (store.getState().info.language === null) {
     const locale = await Util.getCurrentLocaleAsync();
-    let language = JSON.stringify(locale, null, 2) === 'ru-RU' ? 'ru' : 'en';
+    const language = JSON.stringify(locale, null, 2) === 'ru-RU' ? 'ru' : 'en';
  
     I18n.locale = language;
     store.dispatch(setLanguage(language));
   } else {
     I18n.locale = store.getState().info.language;
   }
+}
+
+const handleTranslation = async (store) => {
+  I18n.fallbacks = true;
+  I18n.translations = translations;
+  
+  await handleLanguage(store);
 }
 
 const handleCurrentWish = (store) => {
@@ -38,7 +42,8 @@ const handleResetBadgeNumber = () => {
 }
 
 export const runStartupTasks = async (store) => {
-  handleLanguage(store);
+  await handleTranslation(store);
+
   handleCurrentWish(store);
   handleMusicPlay(store);
   handleResetBadgeNumber();
